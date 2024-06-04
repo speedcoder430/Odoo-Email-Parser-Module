@@ -1,0 +1,25 @@
+<odoo>
+    <template id="inventory" name="Inventory">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Inventory data</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="inventory" t-as="item">
+                            <tr>
+                                <td t-esc="item['product_id']"></td>
+                                <td t-esc="item['quantity']"></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>

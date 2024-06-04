@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_email_parser_fetch,email_parser.fetch,model_email_parser_fetch,base.group_user,1,1,1,1
+access_email_parser_parsed_email,email_parser.parsed_email,model_email_parser_parsed_email,base.group_user,1,1,1,1
+access_email_parser_inventory,email_parser.inventory,model_email_parser_inventory,base.group_user,1,1,1,1
+access_email_parser_inventory_update,email_parser.inventory_update,model_email_parser_inventory_update,base.group_user,1,1,1,1

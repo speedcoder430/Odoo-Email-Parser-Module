@@ -1,0 +1,26 @@
+<odoo>
+    <record id="view_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <sheet position="inside">
+                <group string="Email Parsing Details">
+                    <field name="parsed_email_subject" readonly="1"/>
+                    <field name="parsed_email_body" readonly="1"/>
+                </group>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="view_sale_order_tree_inherit" model="ir.ui.view">
+        <field name="name">sale.order.tree.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="parsed_email_subject"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

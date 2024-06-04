@@ -1,0 +1,25 @@
+<odoo>
+    <template id="index" name="Fetch Mail Messages">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Fetch Messages</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Body</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="messages" t-as="message">
+                            <tr>
+                                <td t-esc="message['id']" />
+                                <td t-esc="message['body']" />
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,31 @@
+<odoo>
+    <template id="parsed_email" name="Fetch Mail Messages">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1>Parsed Messages</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Part Number</th>
+                            <th>Product Name</th>
+                            <th>UID</th>
+                            <th>Order ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="parsed_messages" t-as="parsed_message">
+                            <tr>
+                                <td t-esc="parsed_message['id']"/>
+                                <td t-esc="parsed_message['part_number']"/>
+                                <td t-esc="parsed_message['product_name']"/>
+                                <td t-esc="parsed_message['uid']"/>
+                                <td t-esc="parsed_message['order_id']"/>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>

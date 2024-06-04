@@ -1,0 +1,38 @@
+<odoo>
+  <record id="view_email_parser_fetch_tree" model="ir.ui.view">
+    <field name="name">email_parser.fetch.tree</field>
+    <field name="model">email_parser.fetch</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="subject" />
+        <field name="body" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_email_parser_fetch_form" model="ir.ui.view">
+    <field name="name">email_parser.fetch.form</field>
+    <field name="model">email_parser.fetch</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="subject" />
+          <field name="body" />
+        </group>
+        <footer>
+          <button string="Fetch Emails" type="object" name="fetch_emails" class="btn-primary" />
+        </footer>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_email_parser_fetch" model="ir.actions.act_window">
+    <field name="name">Email Parser Fetch</field>
+    <field name="res_model">email_parser.fetch</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="menu_email_parser_fetch_root" name="Fetch Mail" />
+  <menuitem id="menu_email_parser_fetch" name="Email Parser"
+    parent="menu_email_parser_fetch_root" action="action_email_parser_fetch" />
+</odoo>
