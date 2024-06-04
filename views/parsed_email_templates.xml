@@ -7,20 +7,32 @@
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Creation Date</th>
+                            <th>Customer Name</th>
                             <th>Part Number</th>
                             <th>Product Name</th>
                             <th>UID</th>
                             <th>Order ID</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Record</th>
                         </tr>
                     </thead>
                     <tbody>
                         <t t-foreach="parsed_messages" t-as="parsed_message">
                             <tr>
                                 <td t-esc="parsed_message['id']"/>
+                                <td t-esc="parsed_message['creation_date']"/>
+                                <td t-esc="parsed_message['customer_name']"/>
                                 <td t-esc="parsed_message['part_number']"/>
                                 <td t-esc="parsed_message['product_name']"/>
                                 <td t-esc="parsed_message['uid']"/>
                                 <td t-esc="parsed_message['order_id']"/>
+                                <td t-esc="parsed_message['quantity']"/>
+                                <td t-esc="parsed_message['price']"/>
+                                <td t-esc="parsed_message['total_price']"/>
+                                <td t-esc="parsed_message['record']"/>
                             </tr>
                         </t>
                     </tbody>

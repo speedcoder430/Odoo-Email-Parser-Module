@@ -4,10 +4,16 @@
     <field name="model">email_parser.parsed_email</field>
     <field name="arch" type="xml">
       <tree>
+        <field name="creation_date" />
+        <field name="customer_name" />
         <field name="part_number" />
         <field name="product_name" />
         <field name="uid" />
         <field name="order_id" />
+        <field name="quantity" />
+        <field name="price" />
+        <field name="total_price" />
+        <field name="record" />
       </tree>
     </field>
   </record>
@@ -18,10 +24,16 @@
     <field name="arch" type="xml">
       <form>
         <group>
+          <field name="creation_date" />
+          <field name="customer_name" />
           <field name="part_number" />
           <field name="product_name" />
           <field name="uid" />
           <field name="order_id" />
+          <field name="quantity" />
+          <field name="price" />
+          <field name="total_price" />
+          <field name="record" />
         </group>
       </form>
     </field>
