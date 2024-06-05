@@ -3,7 +3,6 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
-
 class FetchEmail(models.Model):
     _name = 'email_parser.fetch'
     _description = 'Email Parser Fetch'
@@ -21,7 +20,7 @@ class FetchEmail(models.Model):
 
     def process_message(self, subject, body):
         try:
-            self.env['mail.message'].create({
+            self.create({
                 'subject': subject,
                 'body': body,
             })

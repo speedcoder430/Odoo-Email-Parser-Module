@@ -14,6 +14,7 @@
         <field name="price" />
         <field name="total_price" />
         <field name="record" />
+        <field name="processed" />
       </tree>
     </field>
   </record>
@@ -34,6 +35,7 @@
           <field name="price" />
           <field name="total_price" />
           <field name="record" />
+          <field name="processed" />
         </group>
       </form>
     </field>

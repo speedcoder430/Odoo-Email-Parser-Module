@@ -17,6 +17,7 @@
                             <th>Price</th>
                             <th>Total</th>
                             <th>Record</th>
+                            <th>Processed</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,6 +34,7 @@
                                 <td t-esc="parsed_message['price']"/>
                                 <td t-esc="parsed_message['total_price']"/>
                                 <td t-esc="parsed_message['record']"/>
+                                <td t-esc="parsed_message['processed']"/>
                             </tr>
                         </t>
                     </tbody>
